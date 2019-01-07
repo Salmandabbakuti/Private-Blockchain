@@ -17,6 +17,22 @@ geth --datadir ./node1 init myGenesis.json
 ```
 geth --datadir ./node1 --networkid 2018 console
 ```
-it will take you to jS console
+it will take you to jS console.
 
-Rest is coming soon..........................
+6. Create new account that holds mining reward in the console
+
+```
+> personal.newAccount("password Here")
+
+```
+7.Set it as default account for mining reward
+
+```
+miner.setEtherbase(web3.eth.accounts[0])
+```
+this command should return true.
+
+8. Adding Peers and connecting them together
+
+
+Rest is coming soon...>
