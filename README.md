@@ -15,7 +15,7 @@ it will start a private blockchain with Genesis state.
  
 4. Provide network id by running this command
 ```
-geth --datadir ./node1 --networkid 2018 console
+geth --datadir ./node1 --networkid 2019 console
 ```
 it will take you to jS console.
 
@@ -31,6 +31,7 @@ it will take you to jS console.
 miner.setEtherbase(web3.eth.accounts[0])
 ```
 this command should return true.
+
 7. Start mining activity
 
 ```
@@ -45,13 +46,15 @@ this command should return true.
 geth --datadir ./node2 init myGenesis.json
 
 ```
-==> Connect first node with same network id as first node and use different port.
+==> Connect 2nd node with same network id as first node and use different port.
 ```
 geth --datadir ./node2 --networkid 2019 --port 8081 --ipcdisable --nodiscover console
 
 ```
 Above command will instantiate chain with networkid 0f 2019 and port of 8081. but node2 is still not connected to node1. to connect, run following commands.
+
 ** Repeat step 5, 6 and 7 to add accounts to node 2. ** 
+
 ==> in the first node console run this command
 ```
 >admin.nodeInfo
