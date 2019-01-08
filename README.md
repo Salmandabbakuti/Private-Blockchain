@@ -3,41 +3,41 @@
 1.Geth
 2.Code editor
 ## Steps
-1.Create a new folder with a name of your choice. for this tutorial, lets say "chain" on your desktop.
+1. Create a new folder with a name of your choice. for this tutorial, lets say "chain" on your desktop.
 
-2.Copy and paste "myGenesis.json" file(ceate file with this code and with same name) and put it in your folder directory(chain).
+2. Copy and paste "myGenesis.json" file(ceate file with this code and with same name) and put it in your folder directory(chain).
 
-3.Go to command prompt. in your directory, run the following command
+3. Go to command prompt. in your directory, run the following command
 ```
 geth --datadir ./node1 init myGenesis.json
  ```
  it will start a private blockchain with Genesis state.
  
-4.Provide network id by running this command
+4. Provide network id by running this command
 ```
 geth --datadir ./node1 --networkid 2018 console
 ```
 it will take you to jS console.
 
-6. Create new account that holds mining reward in the console
+5. Create new account that holds mining reward in the console
 
 ```
 > personal.newAccount("password Here")
 
 ```
-7.Set it as default account for mining reward
+6.Set it as default account for mining reward
 
 ```
 miner.setEtherbase(web3.eth.accounts[0])
 ```
 this command should return true.
-8.Start mining activity
+7. Start mining activity
 
 ```
 > miner.start()
 
 ```
-9. Adding Peers and connecting them together
+8. Adding Peers and connecting them together
 
 ==> Open another cmd prompt, initialize same genesis file with new data directory like below
 
@@ -51,8 +51,8 @@ geth --datadir ./node2 --networkid 2019 --port 8081 --ipcdisable --nodiscover co
 
 ```
 Above command will instantiate chain with networkid 0f 2019 and port of 8081. but node2 is still not connected to node1. to connect, run following commands.
-** Repeat step 6 and 7 to add accounts to node 2. ** 
-==> in the first nde console run this command
+** Repeat step 5, 6 and 7 to add accounts to node 2. ** 
+==> in the first node console run this command
 ```
 >admin.nodeInfo
 
@@ -70,4 +70,5 @@ it will return true if, node succesfully conncted. make sure your ``` "enode://.
 >admin.peer()
 ```
 it will show you conncted node with port id, network id.. etc.
+
 Boom... you have succesfully initiated private blockchain with 2 nodes.
