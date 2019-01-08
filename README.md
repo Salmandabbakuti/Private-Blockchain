@@ -57,7 +57,7 @@ Above command will instantiate chain with networkid 0f 2019 and port of 8081. bu
 >admin.nodeInfo
 
 ```
-above command will return node info with different parameters. copy the enode value which is like this ```"enode://.....@" ```. it is an id of node1. this id is key to connect nod2 with node1. we will do it in the next step.
+above command will return node info with different parameters. copy the enode value which is like this ```"enode://.....@" ```. it is an id of node1. this id is key to connect node2 with node1. we will do it in the next step.
 
  ==> in your node2 console,
 
