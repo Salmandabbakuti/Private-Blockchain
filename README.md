@@ -11,7 +11,7 @@
 ```
 geth --datadir ./node1 init myGenesis.json
  ```
- it will start a private blockchain with Genesis state.
+it will start a private blockchain with Genesis state.
  
 4. Provide network id by running this command
 ```
