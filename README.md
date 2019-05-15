@@ -70,7 +70,7 @@ above command will return node info with different parameters. copy the enode va
 it will return true if, node succesfully conncted. make sure your ``` "enode://...@" ``` value is correct. to confirm if node is connected, run below command in the node1 console
 
 ```
->admin.peer()
+>admin.peers
 ```
 it will show you conncted node with port id, network id.. etc.
 
